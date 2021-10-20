@@ -17,7 +17,7 @@ jobs:
         python –m pip install –upgrade pip
         pip install pylint
     - run: |
-      python lint_test.py
+        python lint_test.py
     - name: "Build container"
       run: |
         echo "Building container image"
