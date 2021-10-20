@@ -1,0 +1,18 @@
+name: "Deploy of python app"
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This has been triggered by ${{ github.event_name }} event"
+      - run: echo "this job is running on ${{runner.os}} hosted on GitHub"
+      - name: "Check out repository code"
+        uses: actions/checkout@v2
+      - name: "Set up python 3.9"
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: "Install dependencies"
+      - run: |
+          python –m pip install –upgrade pip
+          pip install pylint
