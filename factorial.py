@@ -2,7 +2,7 @@ import time
 final_list = []
 
 
-def factorial(n) :
+def factorial(n):
     """Return the factorial of n, an exact integer >= 0.
     >>> [factorial(n) for n in range(6)]
     [1, 1, 2, 6, 24, 120]
@@ -25,13 +25,13 @@ def factorial(n) :
         ...
     OverflowError: n too large
     """
-    time.sleep(.1) 
+    time.sleep(.1)
     factorial = 1
     for i in range(1, n+1):
         factorial = factorial * i
     return factorial
 
-def sum_factorial() :
+def sum_factorial():
     for i in range(50):
         final_list.append(factorial(i))
     result = sum(final_list)
