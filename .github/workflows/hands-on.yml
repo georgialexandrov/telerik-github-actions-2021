@@ -82,3 +82,9 @@ jobs:
     - name: Unit test
       run: |
         python3 -m doctest factorial.py
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy
+      run: echo "Deploy to production"
