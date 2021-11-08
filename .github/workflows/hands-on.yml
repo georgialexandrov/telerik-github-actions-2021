@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: echo "The job was automatically triffered by a ${{ github.event_name }} event"
+    - run: echo "${{ secrets.PASSWORD }}"
     - name: Print custom env variables from ubuntu-latest
       env:
         STEP_ENVIRONMENT_VARIABLE: 'custom step environment variable for bash'
